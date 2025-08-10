@@ -7,10 +7,10 @@ const Logo = ({ className }: { className?: string }) => {
     <Link href="/" className={cn("flex items-center gap-2", className)}>
       <Image
 
-        src="/logo.jpg" // Path to your logo in public folder
+        src="/logo.png" // Path to your logo in public folder
         alt="Prency Hangers Logo"
-        width={28} // Adjust size
-        height={28}
+        width={56} // Adjust size
+        height={56}
         className="object-contain"
         priority // Ensures it loads fast for the header
       />

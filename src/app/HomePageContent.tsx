@@ -147,7 +147,7 @@ export default function HomePageContent() {
     <>
        <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
         <Image
-            src="https://placehold.co/1920x1080"
+            src="/herobg (1).png"
             alt="Hero background"
             fill
             priority

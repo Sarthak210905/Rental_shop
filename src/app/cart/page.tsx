@@ -80,7 +80,7 @@ export default function CartPage() {
   }, [appliedDiscount, subtotal]);
 
   const securityDeposit = 2000.00;
-  const taxes = (subtotal - discountAmount) * 0.1;
+  const taxes = 0 * 0.1;
   const total = subtotal + taxes + securityDeposit - discountAmount;
   
   const handleApplyDiscount = async () => {

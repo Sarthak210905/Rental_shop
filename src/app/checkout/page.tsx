@@ -135,7 +135,7 @@ export default function CheckoutPage() {
     return cartItems.length * SECURITY_DEPOSIT_PER_ITEM;
   }, [cartItems]);
   
-  const taxes = subtotal * 0.1;
+  const taxes = 0 * 0.1;
 
   const finalTotal = useMemo(() => {
     return subtotal + taxes + (isDeliverable ? shippingCost : 0) + totalSecurityDeposit;
@@ -305,7 +305,7 @@ export default function CheckoutPage() {
                         <FormItem>
                         <FormLabel>ZIP Code</FormLabel>
                         <FormControl>
-                            <Input placeholder="452011" {...field} />
+                            <Input placeholder="452010" {...field} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -324,7 +324,7 @@ export default function CheckoutPage() {
                   <CardContent className="flex flex-col md:flex-row items-center gap-8">
                       <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center border">
                           {/* In a real app, you would generate a dynamic QR code */}
-                          <Image src="/home/user/studio/src/images/Untitled design (1).png" data-ai-hint="qr code" alt="UPI QR Code" width={192} height={192} />
+                          <Image src="/qrcode.png" data-ai-hint="qr code" alt="UPI QR Code" width={192} height={192} />
                       </div>
                       <div className="flex-1 space-y-4">
                           <div className="space-y-1">

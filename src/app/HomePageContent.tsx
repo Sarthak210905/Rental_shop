@@ -193,35 +193,7 @@ export default function HomePageContent() {
           </div>
       </section>
       
-       <section id="featured-categories" ref={el => sectionRefs.current[1] = el} className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-               <div className="text-center mb-12">
-                  <h2 className="text-4xl font-headline font-bold text-foreground">Featured Categories</h2>
-                  <p className="text-muted-foreground mt-2">Explore our most popular collections.</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {featuredCategories.map((category) => (
-                  <Link href={category.href} key={category.name}>
-                    <Card className="relative group overflow-hidden rounded-lg">
-                      <Image 
-                        src={category.imageUrl}
-                        alt={category.name}
-                        width={400}
-                        height={500}
-                        className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
-                        data-ai-hint={category.hint}
-                      />
-                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <h3 className="text-3xl font-headline font-bold text-white drop-shadow-lg">{category.name}</h3>
-                      </div>
-                    </Card>
-                  </Link>
-                ))}
-              </div>
-          </div>
-      </section>
-
+    
       <section id="inventory" className="py-12 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -282,6 +254,36 @@ export default function HomePageContent() {
           )}
         </div>
       </section>
+
+         <section id="featured-categories" ref={el => sectionRefs.current[1] = el} className="py-16 md:py-24">
+          <div className="container mx-auto px-4">
+               <div className="text-center mb-12">
+                  <h2 className="text-4xl font-headline font-bold text-foreground">Featured Categories</h2>
+                  <p className="text-muted-foreground mt-2">Explore our most popular collections.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {featuredCategories.map((category) => (
+                  <Link href={category.href} key={category.name}>
+                    <Card className="relative group overflow-hidden rounded-lg">
+                      <Image 
+                        src={category.imageUrl}
+                        alt={category.name}
+                        width={400}
+                        height={500}
+                        className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                        data-ai-hint={category.hint}
+                      />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <h3 className="text-3xl font-headline font-bold text-white drop-shadow-lg">{category.name}</h3>
+                      </div>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+          </div>
+      </section>
+
 
        <section id="why-choose-us" ref={el => sectionRefs.current[2] = el} className="py-16 md:py-24">
         <div className="container mx-auto px-4">
